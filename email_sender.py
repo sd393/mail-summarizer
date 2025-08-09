@@ -12,6 +12,6 @@ print(smtpObj.starttls())
 
 smtpObj.login(email, app_password)
 
-smtpObj.sendmail(email, email, "Subject: testEmail \nHere's a summary of your recent emails!")
+smtpObj.sendmail(email, email, "Subject: testEmail \nHere's a summary sdf sdf of your recent emails!")
 
 smtpObj.quit()
