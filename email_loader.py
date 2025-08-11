@@ -13,18 +13,23 @@ imapObj.login(email, app_password)
 
 imapObj.select_folder("INBOX", readonly=True)
 
-UIDs = imapObj.search([u'SINCE', date(2025, 8, 8), "UNSEEN"])
-#print(UIDs)
+UIDs = imapObj.search([u'SINCE', date(2025, 8, 10), "UNSEEN"])
+print(UIDs)
 
 raw_messages = imapObj.fetch(UIDs, ['BODY[]'])
 #pprint.pprint(raw_messages[23868])
 #print(raw_messages[23868][b"BODY"])
 
 
+
 messages = []
 for i in range(2):
-    messages.append(pyzmail.PyzMessage.factory(raw_messages[23868+i][b'BODY[]']))
+    messages.append(pyzmail.PyzMessage.factory(raw_messages[23909+i][b'BODY[]']))
 
 print(messages[0].get_subject())
 print(messages[0].text_part != None)
 print(messages[0].text_part.get_payload().decode("utf-8"))
+print(messages[0].html_part.get_payload().decode(messages[0].html_part.charset))
+
+
+imapObj.logout()
