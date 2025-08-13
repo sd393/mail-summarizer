@@ -15,17 +15,18 @@ def get_summary(text):
                     and that header will contain both the \"SUBJECT\" and the \"BODY\". Otherwise, however, these emails will be provided to you in raw text form, often containing HTML 
                     tags and other irrelevant data that you will need to parse. Moreover, these emails will cover various topics ranging from promotions to newspaper
                     digests to important communications. You should structure your summary with headers digesting the main threads / conversation topics, and then bullet points 
-                    covering the important details. You should limit the length of your response to a message that is readable within at most five minutes of skimming.
+                    covering the important details. The headers should show up bolded when displayed in the email client - for this, you will need to use html <strong>text</strong> tags.
+                    You should limit the length of your response to a message that is readable within at most three minutes of skimming.
                     
                     Here is some example structure that you can follow - this is exactly what will be sent to the users inbox following a week:
                     (example output starts here)
                     **Here is a summary of your emails from the last week**
-                    [Email Thread #1]
+                    [<strong>Email Thread #1</strong>]
                     [Summary]
-                    [Email Thread #2]
+                    [<strong>Email Thread #2</strong>]
                     [Summary]
                     ...
-                    [Email Thread #n]
+                    [<strong>Email Thread #n</strong>]
                     [Summary]
                     **That completes the summary of your inbox!**
                     (example output ends here)

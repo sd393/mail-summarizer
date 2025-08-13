@@ -15,7 +15,7 @@ def send_email(message):
 
     smtpObj.login(email, app_password)
 
-    smtpObj.sendmail(email, email, "Subject: This Week's Inbox Summary \n" + message)
+    smtpObj.sendmail(email, email, ("Subject: This Week's Inbox Summary \n" + message).encode("utf-8"))
 
     smtpObj.quit()
 if __name__ == "__main__":
