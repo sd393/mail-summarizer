@@ -14,7 +14,7 @@ def get_recent_emails():
 
         imapObj.select_folder("INBOX", readonly=True)
 
-        UIDs = imapObj.search([u'SINCE', date(2025, 8, 12), "UNSEEN"])
+        UIDs = imapObj.search([u'SINCE', date(2025, 8, 16), "UNSEEN"])
         #print(UIDs)
 
         raw_messages = imapObj.fetch(UIDs, ['BODY[]'])
