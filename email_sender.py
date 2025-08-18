@@ -1,12 +1,14 @@
 import os
 import smtplib
 from dotenv import load_dotenv
+import markdown
 
 load_dotenv()
 email = os.getenv("EMAIL")
 app_password = os.getenv("APP_PASSWORD")
 
 def send_email(message):
+    html_output = markdown.markdown(message)
     message = message.encode("utf-8")
     message = message.decode("utf-8")
     smtpObj = smtplib.SMTP("smtp.gmail.com", 587)
