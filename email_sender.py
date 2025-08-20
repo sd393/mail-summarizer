@@ -12,7 +12,7 @@ app_password = os.getenv("APP_PASSWORD")
 def send_email(message):
     #Define message container
     message_container = MIMEMultipart('alternative')
-    message_container['Subject'] = "Link"
+    message_container['Subject'] = "Your email summary for this week"
     message_container["From"] = email
     message_container["To"] = email 
 
@@ -27,19 +27,19 @@ def send_email(message):
     message_container.attach(text_part)
     message_container.attach(html_part)
 
-    #message = message.encode("utf-8")
-    #message = message.decode("utf-8")
+    #Start server
     smtpObj = smtplib.SMTP("smtp.gmail.com", 587)
     smtpObj.ehlo()
     smtpObj.starttls()
-
     smtpObj.login(email, app_password)
 
+    #Send email
     smtpObj.sendmail(email, email, message_container.as_string())
 
+    #Quit connection
     smtpObj.quit()
+
 if __name__ == "__main__":
-    #send_email("hello \n sdf *")
     pass
     
 

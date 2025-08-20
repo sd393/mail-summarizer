@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-import markdown 
-
 load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
@@ -17,18 +15,21 @@ def get_summary(text):
                     and that header will contain both the \"SUBJECT\" and the \"BODY\". Otherwise, however, these emails will be provided to you in raw text form, often containing HTML 
                     tags and other irrelevant data that you will need to parse. Moreover, these emails will cover various topics ranging from promotions to newspaper
                     digests to important communications. You should structure your summary with headers digesting the main threads / conversation topics, and then bullet points 
-                    covering the important details. Your message should be designed such that a markdown converter will be able to render your message in html - this is a MUST HAVE.
+                    covering the important details. 
+                    Your message should be designed such that a markdown converter will be able to render your message in html - this is a MUST HAVE. For bullet points, remember to include four spaces
+                    between the asterisk and the list item (e.g. "* bullet" doesn't render correctly, while "*    bullet" does) - also remember to include a blank line between the header and the first 
+                    bullet point under that header.
                     You should limit the length of your response to a message that is readable within at most three minutes of skimming - so limit your response to 600 words.
                     
                     Here is some example structure that you can follow - this is exactly what will be sent to the users inbox following a week:
                     (example output starts here)
-                    **Here is a summary of your emails from the last week**
-                    [<strong>Email Thread #1</strong>]
+                    **Here is a summary of your emails from the last week!**
+                    **Email Thread #1**
                     [Summary]
-                    [<strong>Email Thread #2</strong>]
+                    **Email Thread #2**
                     [Summary]
                     ...
-                    [<strong>Email Thread #n</strong>]
+                    **Email Thread #n**
                     [Summary]
                     **That completes the summary of your inbox!**
                     (example output ends here)
