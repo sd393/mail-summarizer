@@ -9,11 +9,8 @@ const NavBar = () => {
     <ul className="nav-links">
       <li>
         <a href="/" className="logo">
-        Mail Summarizer
+        Pensieve
         </a>
-      </li>
-      <li>
-        <a href="/products">Products</a>
       </li>
       <li>
         <a href="/pricing">Pricing</a>
@@ -29,8 +26,7 @@ const NavBar = () => {
         <a href="/contact">Contact</a>
       </li>
       <li>
-        <a href="/start" className="get-started">
-        </a>
+        <a href="/start" className="get-started"> Get Started</a>
       </li>
       <li>
         <a href="/account" className="user-icon">

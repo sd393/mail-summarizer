@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   /*padding: 1rem;*/
 }
@@ -73,7 +73,7 @@
   display: inline-block;
   
   /* Colors */
-  background-color: #4A90E2;
+  background-color: #0061fe;
   color: white;
 
   /* Shape & Spacing */

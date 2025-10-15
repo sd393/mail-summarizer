@@ -1,0 +1,87 @@
+.pricing-card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.pricing-card {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: white;
+  position: relative; /* Needed for the banner */
+  margin: 3rem;
+}
+
+/* Style for the featured card */
+.pricing-card.featured {
+  border: 2px solid #007bff; /* Highlight color */
+  transform: scale(1.05); /* Make it slightly bigger */
+}
+
+.best-value-banner {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a3d9a5; /* Greenish color like the example */
+  color: #2a3a2b;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-left: 1.5rem;
+}
+
+.buy-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 75%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem;
+  text-align: left;
+}
+
+.features-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* You can add a checkmark icon here later */
+.features-list li::before {
+  content: '✓';
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 0.75rem;
+}

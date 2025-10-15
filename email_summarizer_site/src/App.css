@@ -1,0 +1,58 @@
+.App {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Make sure the app takes at least the full viewport height */
+  color: white; /* Change text color to white for better contrast */
+  
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: moveGradient 15s ease infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-bottom: 15vh;
+    flex-direction: column;
+}
+
+.email-form-container {
+  display: flex; /* This aligns children in a row */
+  align-items: center; /* This vertically aligns them in the middle */
+  margin-top: 20px; /* Adds space above the form */
+}
+
+.email-input {
+    /*margin-top: 20px; /* Add some space above the input field */
+    padding: 12px 15px;
+    font-size: 1rem;
+    width: 400px; /* Or whatever width you prefer */
+    border-radius: 8px;
+    order: 1px solid #ccc;
+}
+
+.submit-button {
+  font-weight: 700;
+  padding: 12px 20px;
+  font-size: 1rem;
+  margin-left: 10px; /* Adds space between the input and button */
+  border-radius: 8px;
+  border: none;
+  background-color: black; /* Example blue color */
+  color: white;
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
