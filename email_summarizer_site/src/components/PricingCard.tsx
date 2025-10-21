@@ -1,4 +1,5 @@
 import "./PricingCard.css";
+import { redirectGoogleAuth } from "../utils/auth.js";
 
 interface PricingCardProps {
   planName: string;
@@ -20,7 +21,7 @@ return (
         <p className="price">{price}</p>
       </div>
       
-      <button className="buy-button">{buttonText}</button> 
+      <button onClick={redirectGoogleAuth} className="buy-button">{buttonText}</button> 
       
       
     <ul className="features-list">

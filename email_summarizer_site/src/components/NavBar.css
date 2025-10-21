@@ -75,6 +75,7 @@
   /* Colors */
   background-color: #0061fe;
   color: white;
+  border: 1px solid white;
 
   /* Shape & Spacing */
   padding: 15px 30px;
